@@ -1,0 +1,67 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0C1017"/>
+  <rect x="20" y="20" width="760" height="410" rx="10" fill="#111622" stroke="#1E2738" stroke-width="2"/>
+  
+  <!-- Header Bar -->
+  <rect x="20" y="20" width="760" height="38" rx="10" fill="#0A0D14"/>
+  <circle cx="45" cy="39" r="5" fill="#EC6A5E"/>
+  <circle cx="62" cy="39" r="5" fill="#F5BF4F"/>
+  <circle cx="79" cy="39" r="5" fill="#62C554"/>
+  <text x="105" y="44" fill="#8B93A1" font-family="monospace" font-size="12">chhattisgarhtaxiservice.com — Full Stack Production Platform</text>
+  <rect x="650" y="28" width="115" height="22" rx="4" fill="#14281E" stroke="#1E452C"/>
+  <text x="662" y="43" fill="#3DDC84" font-family="monospace" font-size="10">LIVE WEBSITE</text>
+
+  <!-- Left Column: Booking Interface -->
+  <rect x="45" y="75" width="310" height="335" rx="8" fill="#141C2B" stroke="#253550"/>
+  <text x="65" y="105" fill="#F1F5F9" font-family="sans-serif" font-weight="bold" font-size="16">Book A Taxi</text>
+  <text x="65" y="125" fill="#64748B" font-family="monospace" font-size="11">Chhattisgarh Regional Transit</text>
+
+  <!-- Pickup Input -->
+  <rect x="65" y="145" width="270" height="40" rx="6" fill="#0E131E" stroke="#253550"/>
+  <text x="80" y="170" fill="#94A3B8" font-family="sans-serif" font-size="12">Pickup: Raipur Junction</text>
+
+  <!-- Drop Input -->
+  <rect x="65" y="195" width="270" height="40" rx="6" fill="#0E131E" stroke="#253550"/>
+  <text x="80" y="220" fill="#94A3B8" font-family="sans-serif" font-size="12">Drop: Durg (BIT Campus)</text>
+
+  <!-- Vehicle Tier Selection -->
+  <rect x="65" y="250" width="85" height="60" rx="6" fill="#192336" stroke="#3DDC84" stroke-width="1.5"/>
+  <text x="75" y="275" fill="#F1F5F9" font-family="sans-serif" font-weight="600" font-size="12">Sedan</text>
+  <text x="75" y="295" fill="#3DDC84" font-family="monospace" font-size="11">Selected</text>
+
+  <rect x="157" y="250" width="85" height="60" rx="6" fill="#0E131E" stroke="#253550"/>
+  <text x="167" y="275" fill="#94A3B8" font-family="sans-serif" font-size="12">SUV</text>
+  <text x="167" y="295" fill="#64748B" font-family="monospace" font-size="11">Available</text>
+
+  <rect x="250" y="250" width="85" height="60" rx="6" fill="#0E131E" stroke="#253550"/>
+  <text x="260" y="275" fill="#94A3B8" font-family="sans-serif" font-size="12">Hatchback</text>
+  <text x="260" y="295" fill="#64748B" font-family="monospace" font-size="11">Available</text>
+
+  <!-- Confirm CTA -->
+  <rect x="65" y="330" width="270" height="45" rx="6" fill="#3DDC84"/>
+  <text x="135" y="358" fill="#0B0D10" font-family="sans-serif" font-weight="bold" font-size="14">Confirm Trip Booking</text>
+
+  <!-- Right Column: Dispatch & Route Telemetry -->
+  <rect x="375" y="75" width="385" height="335" rx="8" fill="#141C2B" stroke="#253550"/>
+  <text x="395" y="105" fill="#F1F5F9" font-family="sans-serif" font-weight="bold" font-size="15">Active Ride Dispatch</text>
+  <text x="395" y="125" fill="#64748B" font-family="monospace" font-size="11">MongoDB Atlas Synced · JWT Auth</text>
+
+  <!-- Route Visualizer Card -->
+  <rect x="395" y="145" width="345" height="150" rx="6" fill="#0E131E" stroke="#202D42"/>
+  <text x="415" y="175" fill="#3DDC84" font-family="monospace" font-size="11">STATUS: DISPATCH CONFIRMED</text>
+  <text x="415" y="200" fill="#F1F5F9" font-family="sans-serif" font-weight="600" font-size="14">Distance: 38.4 km (Est. 52 mins)</text>
+  <path d="M 415 235 L 705 235" stroke="#202D42" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 415 235 L 610 235" stroke="#3DDC84" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="415" cy="235" r="7" fill="#3DDC84"/>
+  <circle cx="610" cy="235" r="7" fill="#38BDF8"/>
+  <circle cx="705" cy="235" r="7" fill="#64748B"/>
+  <text x="405" y="260" fill="#94A3B8" font-family="monospace" font-size="10">Raipur</text>
+  <text x="590" y="260" fill="#38BDF8" font-family="monospace" font-size="10">En Route</text>
+  <text x="690" y="260" fill="#94A3B8" font-family="monospace" font-size="10">Durg</text>
+
+  <!-- Driver & Security Stats -->
+  <rect x="395" y="310" width="345" height="75" rx="6" fill="#0E131E" stroke="#202D42"/>
+  <text x="415" y="335" fill="#94A3B8" font-family="monospace" font-size="11">SECURITY // JWT Token Verified</text>
+  <text x="415" y="355" fill="#64748B" font-family="monospace" font-size="11">Stack: React + Node.js + Express + MongoDB Atlas</text>
+  <text x="415" y="375" fill="#3DDC84" font-family="monospace" font-size="11">Production Domain: chhattisgarhtaxiservice.com</text>
+</svg>
