@@ -26,6 +26,7 @@ export interface DetailedProject {
   number: string;
   name: string;
   subtitle: string;
+  category?: string;
   problem: string;
   whatIBuilt: string;
   tech: string[];
@@ -82,27 +83,27 @@ export const PERSONAL_INFO = {
   name: 'Arpit Rai',
   initials: 'AR',
   role: 'Full Stack Software Engineer',
-  location: 'India',
+  location: 'Bilaspur, Chhattisgarh, India',
   focus: 'Full Stack & AI Systems',
   currently: 'Full Stack Engineer (Trainee)',
   educationSummary: 'B.Tech CSE · Bhilai Institute of Technology (2026)',
   headlineLead: "I'm Arpit Rai, a Full Stack Software Engineer.",
   headlineSub:
-    'I build basin-scale flood intelligence for Assam, full-stack production taxi booking platforms, and autonomous AI workflow systems.',
+    'Full Stack Software Engineer experienced in building scalable web applications, REST APIs, Chrome Extensions, and autonomous AI-powered workflow systems.',
   headline: {
     line1: 'Full Stack Software Engineer',
     line2: 'Assam Flood Intelligence & Taxi Platform',
-    line3: 'Autonomous AI Workflows',
+    line3: 'Autonomous AI & Chrome Extensions',
   },
   educationDegree: 'B.Tech in Computer Science & Engineering',
-  bio: "I'm a Full Stack Software Engineer focused on building practical web applications, robust REST APIs, and autonomous AI-powered workflows. I work across frontend interfaces, backend microservices, database design, and cloud deployments to turn ideas into reliable production software.",
-  aboutLong: "I'm a Full Stack Software Engineer focused on building practical web applications, robust REST APIs, and autonomous AI-powered workflows. I work across frontend interfaces, backend microservices, database design, and cloud deployments to turn ideas into reliable production software.",
+  bio: "Full Stack Software Engineer with hands-on experience building scalable web applications using React, JavaScript, TypeScript, and Node.js/Express.js. Skilled in designing REST APIs, working across relational and NoSQL databases (PostgreSQL, MySQL, MongoDB), building Chrome Extensions (Manifest V3), and deploying containerized services with Docker.",
+  aboutLong: "Full Stack Software Engineer with hands-on experience building scalable web applications using React, JavaScript, TypeScript, and Node.js/Express.js. Skilled in designing REST APIs, working across relational and NoSQL databases (PostgreSQL, MySQL, MongoDB), and deploying containerized services with Docker. Experienced with AWS S3, Git-based workflows, and writing clean, well-documented code. Strong problem-solver with a track record of delivering full-stack features end-to-end in agile environments.",
   status: 'Available for opportunities',
   email: 'arpitrai414@gmail.com',
   phone: '+91 6268913584',
   phoneTel: '+916268913584',
   githubUrl: 'https://github.com/arpitrai11',
-  linkedinUrl: 'https://linkedin.com/in/arpitrai',
+  linkedinUrl: 'https://www.linkedin.com/in/arpit-rai-1a434524b',
 };
 
 export const DETAILED_PROJECTS: DetailedProject[] = [
@@ -111,13 +112,19 @@ export const DETAILED_PROJECTS: DetailedProject[] = [
     number: '01',
     name: 'JAL-DRISHTI',
     subtitle: 'AI-Driven Flood Prediction & Early Warning Platform',
+    category: 'AI Flood Prediction & Early Warning',
     problem:
       'Assam faces devastating recurrent annual floods where delayed upstream river telemetry leads to lost evacuation windows and emergency response bottlenecks.',
     whatIBuilt:
-      'Engineered a basin-scale hydrological intelligence and early-warning platform combining historical flood events, precipitation gauges, terrain elevation data, and hydrological connectivity to forecast river stages and issue automated threat advisories.',
-    tech: ['Python', 'React', 'TypeScript', 'REST APIs'],
-    screenshot: '/screenshots/jal-drishti.webp',
+      'Building a basin-scale flood intelligence and early-warning platform for Assam, India, combining historical flood events, ERA5-Land rainfall reanalysis, upstream rainfall, hydrological connectivity, and terrain data. Developed an explainable decision-support engine and REST API with a React dashboard featuring historical event replay (56 events, 2000–2018) and an interactive district-level intelligence map. Enforced data validation and readiness gates so missing data is never fabricated; wrote automated tests for graceful degradation and temporal integrity.',
+    tech: ['Python', 'REST APIs', 'React', 'TypeScript', 'ERA5-Land Reanalysis'],
+    screenshot: '/images/jaldrishti.jpg',
     screenshotFallback: '/screenshots/jal-drishti.svg',
+    primaryLink: {
+      label: 'GitHub Profile →',
+      url: 'https://github.com/arpitrai11',
+      isExternal: true,
+    },
     secondaryLink: {
       label: 'GitHub Profile →',
       url: 'https://github.com/arpitrai11',
@@ -127,15 +134,21 @@ export const DETAILED_PROJECTS: DetailedProject[] = [
   {
     id: 'ai-automation',
     number: '02',
-    name: 'AI Social Media Automation',
+    name: 'AI-Generated Social Media Posting',
     subtitle: 'Autonomous Content Generation & Publishing Pipeline',
+    category: 'AI & Workflow Automation',
     problem:
       'Manual multi-platform content curation and publishing across teams is repetitive, slow, and prone to formatting inconsistencies and missed release schedules.',
     whatIBuilt:
-      'Constructed a containerized end-to-end automation pipeline utilizing n8n, Gemini 1.5, and Kie.ai for generating contextual captions, hashtags, and visual assets, featuring an interactive Telegram bot gate for one-click human approval before multi-channel publishing.',
-    tech: ['n8n', 'Gemini', 'Kie.ai', 'Telegram', 'Docker'],
-    screenshot: '/screenshots/ai-automation.webp',
+      'Built an n8n automation workflow that uses AI to generate social media captions, hashtags, and images tailored to a company\'s business profile. Created a Telegram bot interface that collects company name, profile, and platform, then sends post previews with Approve / Edit / Decline controls for human review. Designed to publish to Facebook, Instagram, LinkedIn, and TikTok via Zernio; deployed locally with Docker and ngrok webhooks.',
+    tech: ['n8n', 'Gemini API', 'Kie.ai', 'Telegram Bot API', 'Docker'],
+    screenshot: '/images/social-ai.jpg',
     screenshotFallback: '/screenshots/ai-automation.svg',
+    primaryLink: {
+      label: 'GitHub Profile →',
+      url: 'https://github.com/arpitrai11',
+      isExternal: true,
+    },
     secondaryLink: {
       label: 'GitHub Profile →',
       url: 'https://github.com/arpitrai11',
@@ -147,13 +160,14 @@ export const DETAILED_PROJECTS: DetailedProject[] = [
     number: '03',
     name: 'Chhattisgarh Taxi Service',
     subtitle: 'Full-Stack Production Ride Booking Platform',
+    category: 'Full-Stack Web Application',
     problem:
       'Regional commuters and drivers in Chhattisgarh lacked a reliable, localized web portal for on-demand booking, price transparency, and real-time trip coordination.',
     whatIBuilt:
-      'Designed and deployed a responsive web platform with JWT authentication, real-time ride reservation workflows, vehicle tier selection, driver allocation, and an administrative dispatch management dashboard synced with MongoDB Atlas.',
-    tech: ['React', 'Node.js', 'Express.js', 'MongoDB'],
-    screenshot: '/screenshots/chhattisgarh-taxi.png',
-    screenshotFallback: '/screenshots/chhattisgarh-taxi.webp',
+      'Built a full-stack taxi booking platform with a React frontend and Node.js/Express.js backend. Developed REST APIs and a MongoDB schema to handle booking, driver, and trip data. Implemented user authentication and created responsive booking interfaces for mobile and desktop. Optimized application performance for faster load times and smoother interactions.',
+    tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
+    screenshot: '/images/chhattisgarh-taxi.jpg',
+    screenshotFallback: '/screenshots/chhattisgarh-taxi.png',
     primaryLink: {
       label: 'Visit Live Website →',
       url: 'https://chhattisgarhtaxiservice.com',
@@ -162,6 +176,54 @@ export const DETAILED_PROJECTS: DetailedProject[] = [
     secondaryLink: {
       label: 'GitHub Profile →',
       url: 'https://github.com/arpitrai11',
+      isExternal: true,
+    },
+  },
+  {
+    id: 'responsify',
+    number: '04',
+    name: 'Responsify',
+    subtitle: 'Developer Tool & Multi-Viewport Chrome Extension',
+    category: 'Developer Tool & Chrome Extension',
+    problem:
+      'Front-end engineers struggle to inspect multi-device viewports simultaneously, obstructed by iframe X-Frame-Options blocking and lack of synchronized scrolling controls.',
+    whatIBuilt:
+      'Production-grade Chrome Extension for responsive design testing and multi-device viewport inspection. Features an infinite canvas workspace with synchronized scrolling across mobile/tablet/desktop frames, zero X-Frame-Options blocking via declarativeNetRequest, and an embedded DevTools inspector drawer (element picker, live CSS editor, box model, WCAG contrast checker, and media asset downloader).',
+    tech: ['Manifest V3', 'React', 'TypeScript', 'Vite', 'Tailwind CSS', 'declarativeNetRequest'],
+    screenshot: '/images/responsify.png',
+    screenshotFallback: '/screenshots/responsify.png',
+    primaryLink: {
+      label: 'View Repository →',
+      url: 'https://github.com/arpitrai11/Responsify.git',
+      isExternal: true,
+    },
+    secondaryLink: {
+      label: 'GitHub Repository →',
+      url: 'https://github.com/arpitrai11/Responsify.git',
+      isExternal: true,
+    },
+  },
+  {
+    id: 'meetmind',
+    number: '05',
+    name: 'MeetMind AI',
+    subtitle: 'Local-First Meeting Intelligence & Task Extraction',
+    category: 'AI Chrome Extension & Meeting Intelligence',
+    problem:
+      'Engineering teams lose critical architectural discussions, API contracts, frontend bug reports, and schema decisions discussed in voice meetings due to delayed or manual note-taking.',
+    whatIBuilt:
+      'Local-first, privacy-focused Chrome Extension that captures browser meetings (Google Meet, Teams, Zoom) using chrome.tabCapture and microphone mixing with zero-loss audio loopback. Features local storage in IndexedDB, offscreen recording, free automated transcription with Whisper via Groq, and developer-specific task extraction (APIs, endpoints, frontend bugs, DB schemas, Jira/Linear task summaries, and follow-up emails) powered by Google Gemini 2.0 Flash.',
+    tech: ['Manifest V3', 'React 18', 'TypeScript', 'Vite', 'Tailwind CSS', 'IndexedDB', 'Gemini 2.0 Flash', 'Groq Whisper'],
+    screenshot: '/images/meetmind.jpg',
+    screenshotFallback: '/screenshots/meetmind.jpg',
+    primaryLink: {
+      label: 'View Repository →',
+      url: 'https://github.com/arpitrai11/MeetMind',
+      isExternal: true,
+    },
+    secondaryLink: {
+      label: 'GitHub Repository →',
+      url: 'https://github.com/arpitrai11/MeetMind',
       isExternal: true,
     },
   },
@@ -182,6 +244,16 @@ export const PROJECT_NAME_MAP: Record<string, { name: string; url?: string; tabI
     name: 'AI Social Media Automation',
     tabId: 'projects',
   },
+  'responsify': {
+    name: 'Responsify',
+    url: 'https://github.com/arpitrai11/Responsify.git',
+    tabId: 'projects',
+  },
+  'meetmind': {
+    name: 'MeetMind AI',
+    url: 'https://github.com/arpitrai11/MeetMind',
+    tabId: 'projects',
+  },
   'logimetrix': {
     name: 'Logimetrix Trainee',
     tabId: 'experience',
@@ -196,28 +268,49 @@ export const PROJECT_NAME_MAP: Record<string, { name: string; url?: string; tabI
 export const DETAILED_SKILL_GROUPS: SkillCategoryGroup[] = [
   {
     id: 'frontend',
-    category: 'Frontend',
+    category: 'Frontend & Extensions',
     skills: [
       {
         id: 'react',
         name: 'React',
         level: 'Production',
-        usedIn: ['chhattisgarh-taxi', 'jal-drishti', 'logimetrix'],
+        usedIn: ['chhattisgarh-taxi', 'jal-drishti', 'responsify', 'meetmind', 'logimetrix'],
         description: 'Component architecture, custom hooks, and dynamic client routing.',
       },
       {
         id: 'typescript',
         name: 'TypeScript',
         level: 'Production',
-        usedIn: ['jal-drishti', 'chhattisgarh-taxi'],
+        usedIn: ['jal-drishti', 'chhattisgarh-taxi', 'responsify', 'meetmind'],
         description: 'Strict type safety across client interfaces and full-stack modules.',
       },
       {
         id: 'javascript',
         name: 'JavaScript',
         level: 'Production',
-        usedIn: ['chhattisgarh-taxi', 'holiday-dost'],
+        usedIn: ['chhattisgarh-taxi', 'holiday-dost', 'logimetrix'],
         description: 'Modern ES6+ syntax, asynchronous event handling, and DOM interaction.',
+      },
+      {
+        id: 'chromeextensions',
+        name: 'Chrome Extensions (MV3)',
+        level: 'Production',
+        usedIn: ['responsify', 'meetmind'],
+        description: 'Manifest V3 architecture, service workers, declarativeNetRequest, tabCapture, and offscreen audio loopback.',
+      },
+      {
+        id: 'vite',
+        name: 'Vite',
+        level: 'Production',
+        usedIn: ['responsify', 'meetmind'],
+        description: 'High-speed bundler, hot module replacement, and modern browser extension build pipelines.',
+      },
+      {
+        id: 'tailwindcss',
+        name: 'Tailwind CSS',
+        level: 'Production',
+        usedIn: ['chhattisgarh-taxi', 'jal-drishti', 'responsify', 'meetmind'],
+        description: 'Utility-first rapid UI styling with customized design tokens and responsive viewports.',
       },
       {
         id: 'html5',
@@ -234,11 +327,11 @@ export const DETAILED_SKILL_GROUPS: SkillCategoryGroup[] = [
         description: 'Responsive styling, Flexbox, CSS Grid, and custom animations.',
       },
       {
-        id: 'tailwindcss',
-        name: 'Tailwind CSS',
-        level: 'Production',
-        usedIn: ['chhattisgarh-taxi', 'jal-drishti'],
-        description: 'Utility-first rapid UI styling with customized design tokens.',
+        id: 'webaudioapi',
+        name: 'Web Audio API',
+        level: 'Projects',
+        usedIn: ['meetmind'],
+        description: 'chrome.tabCapture, mic stream mixing, zero-loss loopback, and AudioContext processing.',
       },
       {
         id: 'shadcnui',
@@ -271,7 +364,7 @@ export const DETAILED_SKILL_GROUPS: SkillCategoryGroup[] = [
         id: 'restapis',
         name: 'REST APIs',
         level: 'Production',
-        usedIn: ['chhattisgarh-taxi', 'jal-drishti', 'logimetrix'],
+        usedIn: ['chhattisgarh-taxi', 'jal-drishti', 'responsify', 'meetmind', 'logimetrix'],
         description: 'Clean REST endpoints, request validation, and JSON schemas.',
       },
       {
@@ -300,6 +393,13 @@ export const DETAILED_SKILL_GROUPS: SkillCategoryGroup[] = [
         level: 'Production',
         usedIn: ['chhattisgarh-taxi'],
         description: 'Document database, Mongoose schema modeling, and aggregation pipelines.',
+      },
+      {
+        id: 'indexeddb',
+        name: 'IndexedDB',
+        level: 'Production',
+        usedIn: ['meetmind'],
+        description: 'Local-first browser database for offline meeting audio blobs, transcripts, and action logs.',
       },
       {
         id: 'postgresql',
@@ -349,6 +449,20 @@ export const DETAILED_SKILL_GROUPS: SkillCategoryGroup[] = [
     category: 'AI & Automation',
     skills: [
       {
+        id: 'geminillmapi',
+        name: 'Gemini 2.0 Flash',
+        level: 'Production',
+        usedIn: ['meetmind', 'ai-automation'],
+        description: 'Developer task extraction, bug identification, DB schema detection, and automated summaries.',
+      },
+      {
+        id: 'groqwhisper',
+        name: 'Groq Whisper',
+        level: 'Production',
+        usedIn: ['meetmind'],
+        description: 'Ultra-fast sub-second audio transcription using Groq cloud Whisper inference.',
+      },
+      {
         id: 'n8n',
         name: 'n8n Workflows',
         level: 'Projects',
@@ -356,17 +470,10 @@ export const DETAILED_SKILL_GROUPS: SkillCategoryGroup[] = [
         description: 'Visual workflow node orchestration and multi-step webhook triggers.',
       },
       {
-        id: 'geminillmapi',
-        name: 'Gemini LLM API',
-        level: 'Projects',
-        usedIn: ['ai-automation'],
-        description: 'Contextual prompt synthesis, multi-modal vision, and caption generation.',
-      },
-      {
         id: 'promptengineering',
         name: 'Prompt Engineering',
         level: 'Projects',
-        usedIn: ['ai-automation'],
+        usedIn: ['ai-automation', 'meetmind'],
         description: 'Structured few-shot system prompts with guaranteed JSON output formats.',
       },
       {
@@ -386,14 +493,14 @@ export const DETAILED_SKILL_GROUPS: SkillCategoryGroup[] = [
         id: 'git',
         name: 'Git',
         level: 'Production',
-        usedIn: ['chhattisgarh-taxi', 'jal-drishti', 'logimetrix'],
+        usedIn: ['chhattisgarh-taxi', 'jal-drishti', 'responsify', 'meetmind', 'logimetrix'],
         description: 'Branching, commit conventions, rebasing, and merge conflict resolution.',
       },
       {
         id: 'github',
         name: 'GitHub',
         level: 'Production',
-        usedIn: ['chhattisgarh-taxi', 'jal-drishti', 'ai-automation'],
+        usedIn: ['chhattisgarh-taxi', 'jal-drishti', 'responsify', 'meetmind', 'ai-automation'],
         description: 'Remote repositories, issue tracking, and version management.',
       },
       {
@@ -414,10 +521,9 @@ export const DETAILED_SKILL_GROUPS: SkillCategoryGroup[] = [
         id: 'vscode',
         name: 'VS Code',
         level: 'Production',
-        usedIn: ['chhattisgarh-taxi', 'jal-drishti'],
+        usedIn: ['chhattisgarh-taxi', 'jal-drishti', 'responsify', 'meetmind'],
         description: 'Primary engineering environment, extensions, and debugging tooling.',
       },
-      // TODO: Confirm with user if Swagger / OpenAPI should be listed under Tools & Workflow or kept strictly to core REST APIs.
       {
         id: 'swagger',
         name: 'Swagger / OpenAPI',
@@ -498,9 +604,9 @@ export const PROJECTS: Project[] = DETAILED_PROJECTS.map((p) => ({
   number: p.number,
   name: p.name,
   subtitle: p.subtitle,
-  category: 'Full Stack',
+  category: p.category || 'Production System',
   status: 'Production',
-  description: p.problem,
+  description: p.whatIBuilt || p.problem,
   tech: p.tech,
   primaryLink: p.primaryLink,
   secondaryLink: p.secondaryLink,

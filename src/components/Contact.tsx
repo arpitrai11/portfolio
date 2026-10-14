@@ -104,7 +104,7 @@ export const Contact: React.FC = () => {
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium text-[#F5F7FA] truncate">
-                  linkedin.com/in/arpitrai
+                  linkedin.com/in/arpit-rai-1a434524b
                 </span>
                 <ExternalLink size={13} className="text-[#5F6775] group-hover:text-[#F5F7FA] transition-colors" />
               </div>

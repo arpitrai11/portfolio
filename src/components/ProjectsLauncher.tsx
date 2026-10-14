@@ -10,19 +10,26 @@ import {
   MapPin,
   Workflow,
   Sparkles,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Radio,
+  Mic,
+  Eye,
 } from 'lucide-react';
 import { PROJECTS } from '../data/portfolioData';
 import { GithubIcon } from './Icons';
 
 export const ProjectsLauncher: React.FC = () => {
-  const [filter, setFilter] = useState<'ALL' | 'AI' | 'SAAS'>('ALL');
+  const [filter, setFilter] = useState<'ALL' | 'AI' | 'SAAS' | 'EXTENSIONS'>('ALL');
   const [search, setSearch] = useState('');
 
   const filteredProjects = PROJECTS.filter((proj) => {
     const matchesFilter =
       filter === 'ALL' ||
-      (filter === 'AI' && (proj.number === '01' || proj.number === '02')) ||
-      (filter === 'SAAS' && proj.number === '03');
+      (filter === 'AI' && (proj.number === '01' || proj.number === '02' || proj.number === '05')) ||
+      (filter === 'SAAS' && proj.number === '03') ||
+      (filter === 'EXTENSIONS' && (proj.number === '04' || proj.number === '05'));
 
     const matchesSearch =
       proj.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -42,7 +49,7 @@ export const ProjectsLauncher: React.FC = () => {
             <span className="text-[var(--text-primary)] font-medium">SECTION 05 // APPLICATION LAUNCHER</span>
             <span className="text-[var(--text-muted)]">· Raycast / Spotlight UI</span>
           </div>
-          <span className="hidden sm:inline text-[11px] text-[var(--text-muted)]">3 Installed Applications</span>
+          <span className="hidden sm:inline text-[11px] text-[var(--text-muted)]">5 Installed Applications</span>
         </div>
 
         {/* Launcher Search Bar Frame (Raycast / Spotlight style) */}
@@ -74,7 +81,7 @@ export const ProjectsLauncher: React.FC = () => {
                     : 'bg-[var(--bg-header)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                 }`}
               >
-                All Applications (3)
+                All Applications (5)
               </button>
               <button
                 type="button"
@@ -85,7 +92,7 @@ export const ProjectsLauncher: React.FC = () => {
                     : 'bg-[var(--bg-header)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                 }`}
               >
-                AI & Automation (2)
+                AI & Automation (3)
               </button>
               <button
                 type="button"
@@ -97,6 +104,17 @@ export const ProjectsLauncher: React.FC = () => {
                 }`}
               >
                 Full Stack SaaS (1)
+              </button>
+              <button
+                type="button"
+                onClick={() => setFilter('EXTENSIONS')}
+                className={`px-2.5 py-1 rounded transition-colors shadow-xs ${
+                  filter === 'EXTENSIONS'
+                    ? 'bg-[var(--accent-blue)] text-white font-medium'
+                    : 'bg-[var(--bg-header)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                }`}
+              >
+                Chrome Extensions (2)
               </button>
             </div>
             <span className="text-[var(--text-muted)] hidden sm:inline">
@@ -483,6 +501,246 @@ export const ProjectsLauncher: React.FC = () => {
                   <div className="p-3 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex items-center justify-between text-[11px] text-[var(--text-muted)] shadow-xs">
                     <span>Host: chhattisgarhtaxiservice.com</span>
                     <span className="text-[var(--accent-text)] font-medium">REST API 200 OK</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Project 4: Responsify -> Chrome Extension / DevTools UI */}
+        {(filter === 'ALL' || filter === 'EXTENSIONS') && (
+          <div className="rounded-[14px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] shadow-2xl overflow-hidden transition-all duration-300 hover:border-[var(--border-hover)]">
+            {/* Window Titlebar */}
+            <div className="flex items-center justify-between px-4 py-2.5 border-b border-[var(--border-subtle)] bg-[var(--bg-header)] font-mono text-xs select-none">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#EC6A5E] shadow-xs" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#F5BF4F] shadow-xs" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#62C554] shadow-xs" />
+                <span className="text-[var(--text-secondary)] text-[11px] pl-3">
+                  Responsify.crx — [Multi-Viewport Chrome Extension Workspace]
+                </span>
+              </div>
+              <span className="px-2 py-0.5 rounded bg-[var(--accent-muted)] text-[var(--accent-text)] border border-[var(--accent-border)] text-[10px] font-semibold">
+                CHROME EXTENSION (MV3)
+              </span>
+            </div>
+
+            {/* Extension Workspace Content */}
+            <div className="p-6 lg:p-8 space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                {/* Left: Project Details */}
+                <div className="lg:col-span-5 space-y-4">
+                  <div className="space-y-1">
+                    <span className="font-mono text-xs px-2 py-0.5 rounded border border-[var(--border-subtle)] bg-[var(--bg-header)] text-[var(--accent-blue)] font-semibold">
+                      04 — RESPONSIFY
+                    </span>
+                    <h3 className="text-2xl font-bold tracking-tight text-[var(--text-primary)] pt-1">
+                      Developer Tool & Multi-Viewport Chrome Extension
+                    </h3>
+                  </div>
+
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    Production-grade Chrome Extension for responsive design testing with infinite canvas, synchronized scrolling across mobile/tablet/desktop frames, zero X-Frame-Options blocking, and embedded DevTools inspector.
+                  </p>
+
+                  <div>
+                    <span className="font-mono text-[11px] uppercase tracking-wider text-[var(--text-muted)] block mb-2">
+                      Technologies
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {['Manifest V3', 'React', 'TypeScript', 'Vite', 'Tailwind CSS', 'declarativeNetRequest'].map((t) => (
+                        <span
+                          key={t}
+                          className="font-mono text-xs px-2.5 py-1 rounded border border-[var(--border-subtle)] bg-[var(--bg-header)] text-[var(--text-primary)]"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Real Link Buttons */}
+                  <div className="flex flex-wrap items-center gap-3 pt-2">
+                    <a
+                      href="https://github.com/arpitrai11/Responsify.git"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--accent-blue)] text-white text-xs font-mono font-medium hover:opacity-90 transition-opacity shadow-md"
+                    >
+                      <GithubIcon size={14} className="fill-current" />
+                      <span>View Repository →</span>
+                      <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </a>
+                  </div>
+                </div>
+
+                {/* Right: Extension Canvas Console */}
+                <div className="lg:col-span-7 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-header)]/40 p-5 space-y-4 font-mono">
+                  <div className="flex items-center justify-between text-[11px] text-[var(--text-secondary)] border-b border-[var(--border-subtle)] pb-3">
+                    <div className="flex items-center gap-2">
+                      <Eye size={13} className="text-[var(--accent-blue)]" />
+                      <span className="text-[var(--text-primary)] font-medium">VIEWPORT WORKSPACE // SYNC_SCROLL_ENGINE</span>
+                    </div>
+                    <span className="text-[var(--accent-text)] text-[10px] font-semibold">BYPASS_X_FRAME: TRUE</span>
+                  </div>
+
+                  {/* 3 Viewport Frames */}
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="p-3 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] text-center space-y-2">
+                      <Smartphone size={16} className="mx-auto text-[var(--accent-blue)]" />
+                      <p className="text-xs font-bold text-[var(--text-primary)]">Mobile</p>
+                      <span className="text-[10px] text-[var(--text-muted)] block">375 × 812</span>
+                      <span className="inline-block px-1.5 py-0.5 rounded bg-[var(--accent-muted)] text-[var(--accent-text)] text-[9px] font-semibold">
+                        SYNCED
+                      </span>
+                    </div>
+
+                    <div className="p-3 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] text-center space-y-2">
+                      <Tablet size={16} className="mx-auto text-[var(--accent-blue)]" />
+                      <p className="text-xs font-bold text-[var(--text-primary)]">Tablet</p>
+                      <span className="text-[10px] text-[var(--text-muted)] block">768 × 1024</span>
+                      <span className="inline-block px-1.5 py-0.5 rounded bg-[var(--accent-muted)] text-[var(--accent-text)] text-[9px] font-semibold">
+                        SYNCED
+                      </span>
+                    </div>
+
+                    <div className="p-3 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] text-center space-y-2">
+                      <Monitor size={16} className="mx-auto text-[var(--accent-blue)]" />
+                      <p className="text-xs font-bold text-[var(--text-primary)]">Desktop</p>
+                      <span className="text-[10px] text-[var(--text-muted)] block">1440 × 900</span>
+                      <span className="inline-block px-1.5 py-0.5 rounded bg-[var(--accent-muted)] text-[var(--accent-text)] text-[9px] font-semibold">
+                        SYNCED
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex items-center justify-between text-[11px] text-[var(--text-muted)] shadow-xs">
+                    <span>Embedded DevTools: Element Picker · Live CSS · Box Model</span>
+                    <span className="text-[var(--accent-text)] font-medium">declarativeNetRequest Active</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Project 5: MeetMind AI -> Meeting Intelligence & Extraction UI */}
+        {(filter === 'ALL' || filter === 'AI' || filter === 'EXTENSIONS') && (
+          <div className="rounded-[14px] border border-[var(--border-subtle)] bg-[var(--bg-surface)] shadow-2xl overflow-hidden transition-all duration-300 hover:border-[var(--border-hover)]">
+            {/* Window Titlebar */}
+            <div className="flex items-center justify-between px-4 py-2.5 border-b border-[var(--border-subtle)] bg-[var(--bg-header)] font-mono text-xs select-none">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#EC6A5E] shadow-xs" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#F5BF4F] shadow-xs" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#62C554] shadow-xs" />
+                <span className="text-[var(--text-secondary)] text-[11px] pl-3">
+                  MeetMind.ai — [Audio Tab Capture & Task Extraction Engine]
+                </span>
+              </div>
+              <span className="px-2 py-0.5 rounded bg-[var(--accent-muted)] text-[var(--accent-text)] border border-[var(--accent-border)] text-[10px] font-semibold">
+                LOCAL-FIRST AI EXTENSION
+              </span>
+            </div>
+
+            {/* MeetMind Workspace Content */}
+            <div className="p-6 lg:p-8 space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                {/* Left: Project Details */}
+                <div className="lg:col-span-5 space-y-4">
+                  <div className="space-y-1">
+                    <span className="font-mono text-xs px-2 py-0.5 rounded border border-[var(--border-subtle)] bg-[var(--bg-header)] text-[var(--accent-blue)] font-semibold">
+                      05 — MEETMIND AI
+                    </span>
+                    <h3 className="text-2xl font-bold tracking-tight text-[var(--text-primary)] pt-1">
+                      Local-First Meeting Intelligence & Task Extraction
+                    </h3>
+                  </div>
+
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    Privacy-focused Chrome Extension capturing browser meetings (Google Meet, Teams, Zoom) using chrome.tabCapture and microphone mixing with zero-loss audio loopback. Free automated transcription with Whisper via Groq, and developer-specific task extraction powered by Gemini 2.0 Flash.
+                  </p>
+
+                  <div>
+                    <span className="font-mono text-[11px] uppercase tracking-wider text-[var(--text-muted)] block mb-2">
+                      Technologies
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {['Manifest V3', 'React 18', 'TypeScript', 'Vite', 'IndexedDB', 'Gemini 2.0 Flash', 'Groq Whisper'].map((t) => (
+                        <span
+                          key={t}
+                          className="font-mono text-xs px-2.5 py-1 rounded border border-[var(--border-subtle)] bg-[var(--bg-header)] text-[var(--text-primary)]"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Real Link Buttons */}
+                  <div className="flex flex-wrap items-center gap-3 pt-2">
+                    <a
+                      href="https://github.com/arpitrai11/MeetMind"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--accent-blue)] text-white text-xs font-mono font-medium hover:opacity-90 transition-opacity shadow-md"
+                    >
+                      <GithubIcon size={14} className="fill-current" />
+                      <span>View Repository →</span>
+                      <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </a>
+                  </div>
+                </div>
+
+                {/* Right: Audio Loopback & Gemini Extraction Monitor */}
+                <div className="lg:col-span-7 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-header)]/40 p-5 space-y-4 font-mono">
+                  <div className="flex items-center justify-between text-[11px] text-[var(--text-secondary)] border-b border-[var(--border-subtle)] pb-3">
+                    <div className="flex items-center gap-2">
+                      <Radio size={13} className="text-[var(--accent-blue)]" />
+                      <span className="text-[var(--text-primary)] font-medium">AUDIO STREAM // GROQ_WHISPER &lt;300MS</span>
+                    </div>
+                    <span className="text-[var(--accent-text)] text-[10px] font-semibold">STORAGE: INDEXEDDB</span>
+                  </div>
+
+                  {/* Equalizer stream visualization */}
+                  <div className="p-3.5 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] space-y-2">
+                    <div className="flex items-center justify-between text-[10px] text-[var(--text-muted)]">
+                      <span className="flex items-center gap-1.5 text-[var(--text-primary)]">
+                        <Mic size={12} className="text-[var(--accent-blue)]" />
+                        <span>Mixed Audio Loopback (Tab + Mic)</span>
+                      </span>
+                      <span className="text-[var(--accent-text)] font-semibold">Zero Audio Loss</span>
+                    </div>
+                    <div className="flex items-end justify-between h-7 px-1 gap-1">
+                      {[30, 70, 45, 90, 60, 100, 80, 40, 75, 95, 50, 85, 40, 65, 90, 70].map((val, idx) => (
+                        <div
+                          key={idx}
+                          className="w-full bg-[var(--accent-blue)] rounded-xs"
+                          style={{ height: `${val}%` }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Developer task extraction cards */}
+                  <div className="grid grid-cols-2 gap-2 text-xs">
+                    <div className="p-2.5 rounded-md border border-[var(--border-subtle)] bg-[var(--bg-surface)]">
+                      <span className="text-[10px] text-[var(--text-muted)] block">APIS & ENDPOINTS</span>
+                      <span className="text-[11px] font-semibold text-[var(--text-primary)] mt-0.5 block truncate">
+                        POST /api/v1/auth/verify
+                      </span>
+                    </div>
+                    <div className="p-2.5 rounded-md border border-[var(--border-subtle)] bg-[var(--bg-surface)]">
+                      <span className="text-[10px] text-[var(--text-muted)] block">DATABASE ACTION</span>
+                      <span className="text-[11px] font-semibold text-[var(--accent-text)] mt-0.5 block truncate">
+                        Add TTL index on sessions
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] flex items-center justify-between text-[11px] text-[var(--text-muted)] shadow-xs">
+                    <span>Task Pipeline: Linear / Jira Summary Auto-Generated</span>
+                    <span className="text-[var(--accent-text)] font-medium">Gemini 2.0 Flash</span>
                   </div>
                 </div>
               </div>

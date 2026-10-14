@@ -28,10 +28,10 @@ export const HeroBrowserDeck: React.FC<HeroBrowserDeckProps> = ({
       badgeColor: 'var(--accent-blue)',
     },
     {
-      project: DETAILED_PROJECTS[1], // AI Automation
-      url: 'n8n.workflows/gemini-orchestrator',
-      badge: 'AI PIPELINE',
-      badgeColor: 'var(--accent-purple)',
+      project: DETAILED_PROJECTS[4], // MeetMind AI
+      url: 'meetmind.ai/chrome-extension',
+      badge: 'AI EXTENSION',
+      badgeColor: 'var(--accent)',
     },
   ];
 

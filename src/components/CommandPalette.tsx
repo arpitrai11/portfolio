@@ -162,6 +162,28 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
         onClose();
       },
     },
+    {
+      id: 'proj-responsify',
+      category: 'PROJECTS',
+      title: 'Project: Responsify',
+      subtitle: 'Multi-viewport responsive inspector Chrome Extension',
+      icon: FolderGit2,
+      handler: () => {
+        onSelectTab('projects');
+        onClose();
+      },
+    },
+    {
+      id: 'proj-meetmind',
+      category: 'PROJECTS',
+      title: 'Project: MeetMind AI',
+      subtitle: 'Local-first meeting intelligence & developer task extraction',
+      icon: FolderGit2,
+      handler: () => {
+        onSelectTab('projects');
+        onClose();
+      },
+    },
 
     // Actions
     {
@@ -225,7 +247,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
       id: 'action-linkedin',
       category: 'ACTIONS',
       title: 'Open LinkedIn Profile',
-      subtitle: 'linkedin.com/in/arpitrai (external)',
+      subtitle: 'linkedin.com/in/arpit-rai-1a434524b (external)',
       icon: ExternalLink,
       handler: () => {
         window.open(PERSONAL_INFO.linkedinUrl, '_blank', 'noopener,noreferrer');

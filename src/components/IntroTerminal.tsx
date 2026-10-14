@@ -74,16 +74,18 @@ export const IntroTerminal: React.FC = () => {
       case 'skills':
         res = (
           <div className="text-[var(--text-secondary)]">
-            <span className="text-[var(--accent-blue)] font-medium">Stack:</span> React, TypeScript, Node.js, Express, MongoDB, Docker, n8n, Gemini AI
+            <span className="text-[var(--accent-blue)] font-medium">Stack:</span> React, TypeScript, Node.js, Express, MongoDB, Docker, Chrome Extensions (MV3), Groq Whisper, Gemini 2.0 Flash
           </div>
         );
         break;
       case 'projects':
         res = (
           <div className="text-[var(--text-secondary)] space-y-1">
-            <p>1. Jal-Drishti (Flood Intelligence)</p>
+            <p>1. Jal-Drishti (Flood Intelligence & Early Warning)</p>
             <p>2. AI Social Media Automation (n8n + Gemini)</p>
-            <p>3. Chhattisgarh Taxi Service (Live SaaS)</p>
+            <p>3. Chhattisgarh Taxi Service (Live Production Ride Booking)</p>
+            <p>4. Responsify (Multi-Viewport Chrome Extension)</p>
+            <p>5. MeetMind AI (Local-First Meeting Intelligence)</p>
           </div>
         );
         break;

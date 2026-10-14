@@ -118,6 +118,15 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                 <ExternalLink size={13} className="text-[var(--accent)]" />
                 github.com/arpitrai11
               </a>
+              <a
+                href={PERSONAL_INFO.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 hover:text-[var(--accent)] transition-colors"
+              >
+                <ExternalLink size={13} className="text-[var(--accent)]" />
+                linkedin.com/in/arpit-rai-1a434524b
+              </a>
             </div>
           </div>
 

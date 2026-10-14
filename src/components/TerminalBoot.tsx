@@ -12,7 +12,7 @@ export const TerminalBoot: React.FC<TerminalBootProps> = ({ onComplete }) => {
   const bootSequence = [
     'booting workstation kernel v2026.04...',
     'loading environment: React 19 · TypeScript 6.0 · Node 24 · Linux...',
-    'mounting subsystems: [Jal-Drishti GIS] [Taxi Booking Prod] [n8n Automation]...',
+    'mounting subsystems: [Jal-Drishti GIS] [Taxi Booking Prod] [Responsify MV3] [MeetMind AI]...',
     'handshake verified: Arpit Rai (Full Stack Software Engineer) — READY.',
   ];
 

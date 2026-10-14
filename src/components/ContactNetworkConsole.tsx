@@ -149,7 +149,7 @@ export const ContactNetworkConsole: React.FC = () => {
                   </div>
                   <div>
                     <span className="text-xs font-semibold text-[var(--text-primary)] block truncate">
-                      linkedin.com/in/arpitrai
+                      linkedin.com/in/arpit-rai-1a434524b
                     </span>
                     <span className="text-[10px] text-[var(--text-muted)]">Professional Network</span>
                   </div>

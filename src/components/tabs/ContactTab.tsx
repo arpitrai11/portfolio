@@ -41,7 +41,7 @@ export const ContactTab: React.FC<ContactTabProps> = ({ onNotify }) => {
     {
       key: 'linkedin',
       label: 'LinkedIn Profile',
-      value: 'linkedin.com/in/arpitrai',
+      value: 'linkedin.com/in/arpit-rai-1a434524b',
       href: PERSONAL_INFO.linkedinUrl,
       copyText: PERSONAL_INFO.linkedinUrl,
       icon: LinkedinIcon,

@@ -274,6 +274,65 @@ export const TechLogo: React.FC<TechLogoProps> = ({ name, size = 20, className =
         </svg>
       );
 
+    case 'chromeextensions':
+    case 'chromeextensionsmv3':
+    case 'chrome':
+    case 'manifestv3':
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} aria-label="Chrome Extension">
+          <circle cx="12" cy="12" r="10" fill="#4285F4" opacity="0.2" />
+          <circle cx="12" cy="12" r="4.5" fill="#4285F4" />
+          <path d="M12 2a10 10 0 0 0-8.66 5l4.33 7.5A4.5 4.5 0 0 1 12 7.5h8.66A10 10 0 0 0 12 2z" fill="#EA4335" />
+          <path d="M22 12a10 10 0 0 1-5 8.66L12.67 13.16A4.5 4.5 0 0 0 16.5 12V3.34A10 10 0 0 1 22 12z" fill="#FBBC05" />
+          <path d="M12 22a10 10 0 0 1-8.66-5L7.67 9.5A4.5 4.5 0 0 0 7.5 12a4.5 4.5 0 0 0 4.5 4.5v5.5z" fill="#34A853" />
+          <circle cx="12" cy="12" r="3.5" fill="#FFF" />
+          <circle cx="12" cy="12" r="2.2" fill="#4285F4" />
+        </svg>
+      );
+
+    case 'vite':
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} aria-label="Vite">
+          <path d="M21.5 3.5l-9.3 17.5a.6.6 0 0 1-1.1 0L2.5 5.2a.6.6 0 0 1 .7-.8l8.2 2.7 8.7-4.1a.6.6 0 0 1 .8.5l.6 0z" fill="#BD34FE" opacity="0.2" />
+          <path d="M19.7 2.2L11.5 6.4 3.7 3.8a.5.5 0 0 0-.6.7l8.6 16.3c.2.4.8.4 1 0L20.3 2.9a.5.5 0 0 0-.6-.7z" fill="url(#viteGrad1)" />
+          <path d="M14.8 2.2L7.3 11.5h3.8l-1.9 6.8 7.5-9.3h-3.8l1.9-6.8z" fill="#FFD62E" />
+          <defs>
+            <linearGradient id="viteGrad1" x1="3" y1="2" x2="20" y2="21" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#41D1FF" />
+              <stop offset="1" stopColor="#BD34FE" />
+            </linearGradient>
+          </defs>
+        </svg>
+      );
+
+    case 'indexeddb':
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} aria-label="IndexedDB">
+          <rect width="24" height="24" rx="4" fill="#3B82F6" opacity="0.2" />
+          <ellipse cx="12" cy="6" rx="7" ry="2.5" fill="#3B82F6" />
+          <path d="M5 6v5c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6" stroke="#3B82F6" strokeWidth="1.5" fill="none" />
+          <path d="M5 11v5c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-5" stroke="#3B82F6" strokeWidth="1.5" fill="none" />
+        </svg>
+      );
+
+    case 'groqwhisper':
+    case 'groq':
+    case 'whisper':
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" className={className} aria-label="Groq Whisper">
+          <circle cx="12" cy="12" r="10" fill="#F55036" opacity="0.2" />
+          <path d="M4 12h2v4H4zm3-3h2v10H7zm3-4h2v18h-2zm3 2h2v14h-2zm3 3h2v8h-2zm3 2h2v4h-2z" fill="#F55036" />
+        </svg>
+      );
+
+    case 'webaudioapi':
+    case 'webaudio':
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-label="Web Audio API">
+          <path d="M2 10v4M6 6v12M10 3v18M14 7v10M18 5v14M22 10v4" stroke="#60A5FA" />
+        </svg>
+      );
+
     default:
       return (
         <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
