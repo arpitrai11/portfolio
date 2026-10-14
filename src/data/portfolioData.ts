@@ -104,6 +104,7 @@ export const PERSONAL_INFO = {
   phoneTel: '+916268913584',
   githubUrl: 'https://github.com/arpitrai11',
   linkedinUrl: 'https://www.linkedin.com/in/arpit-rai-1a434524b',
+  portfolioUrl: 'https://portfolio-ten-chi-hxfafi3hvs.vercel.app/',
 };
 
 export const DETAILED_PROJECTS: DetailedProject[] = [
